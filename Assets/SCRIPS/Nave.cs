@@ -1,4 +1,15 @@
-// Movimiento adelante/atrás
+using UnityEngine;
+
+public class Nave : MonoBehaviour
+{
+    // Velocidades
+    public float moveSpeed = 10f;
+    public float verticalSpeed = 5f;
+    public float rotationSpeed = 100f;
+
+    void Update()
+    {
+        // Movimiento adelante/atrás
         float move = Input.GetAxis("Vertical");
 
         // Giro izquierda/derecha
@@ -25,3 +36,5 @@
 
         // Rotación
         transform.Rotate(Vector3.up * rotate * rotationSpeed * Time.deltaTime);
+    }
+}
